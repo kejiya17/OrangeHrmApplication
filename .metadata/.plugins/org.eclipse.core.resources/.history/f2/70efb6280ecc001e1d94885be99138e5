@@ -1,0 +1,23 @@
+package com.utility;
+
+
+
+public class Log {
+	
+	// Logger log=Logger.getLogger("Log");
+	
+	 public static Logger log = Logger.getLogger("Log");
+
+	 public static void info(String message)
+	 {
+
+	 PropertyConfigurator.configure("Log4j.properties");
+	 log.info(message);
+
+	 }
+	
+	
+	
+	
+
+}

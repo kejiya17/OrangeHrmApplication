@@ -1,0 +1,10 @@
+#OrangeHRMApplication LoginPage UserName Property(id)
+OHRMApplication_LogIn_UserName_Property =txtUsername
+
+#OrangeHRMApplication LoginPage Password Property(id)
+OHRMApplication_LogIn_Password_Property =txtPassword
+
+#OrangeHRMApplication LoginPage Login Button Property(Class)
+OHRMApplication_LogIn_LoginButton_Property =button
+
+

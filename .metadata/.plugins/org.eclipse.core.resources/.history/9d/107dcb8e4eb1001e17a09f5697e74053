@@ -1,0 +1,77 @@
+package com.ApplicationLaunch;
+
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Testing_OrangeHRMApplication {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String applicationUrlAddress="http://127.0.0.1/orangehrm-4.2.0.1/symfony/web/index.php/auth/login";
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\vayuv\\OneDrive\\Desktop\\Selenium and Java Clases\\Testing\\Browser driver files\\chromedriver.exe");
+		ChromeDriver driver=new ChromeDriver();
+		driver.get(applicationUrlAddress);
+		
+		System.out.println("1st-EXPECTED TITLE OrangeHRM");
+		System.out.println();
+		
+		String expected_OrangeHRMApplication="OrangeHRM";
+		System.out.println("The Expected OrangeHRM Application Title is:-"+expected_OrangeHRMApplication);
+		String actual_webpageTitle=driver.getTitle();
+		System.out.println("The actual webpage Title is:-"+ actual_webpageTitle);
+		
+		if(actual_webpageTitle.equals(expected_OrangeHRMApplication)) 
+		{
+			System.out.println("The Expected OrangeHRM Application Title is:-pass");
+		}
+		else 
+		{
+			System.out.println("The NOT Expected OrangeHRM Application Title is:-fail");
+		}
+		
+		System.out.println("2nd-EXPECTED URL ADDRESS OrangeHRM-4.2.0.1");
+		System.out.println();
+		
+		String expected_OrangeHRMApplicationURL="OrangeHRM-4.2.0.1";
+		System.out.println("The Expected OrangeHRM Application URL is:-"+expected_OrangeHRMApplicationURL);
+		String actual_webpageURL=driver.getCurrentUrl();
+		System.out.println("The actual webpage URL is:-"+ actual_webpageURL);
+		
+		if(actual_webpageURL.contains(expected_OrangeHRMApplicationURL)) 
+		{
+			System.out.println("The Expected OrangeHRM Application URL is:-pass");
+		}
+		else 
+		{
+			System.out.println("The NOT Expected OrangeHRM Application URL is:-fail");
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}

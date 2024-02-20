@@ -1,0 +1,42 @@
+package com.OrangeHRMApplicationPagesTest;
+
+import java.io.IOException;
+
+import org.testng.annotations.Test;
+
+import com.BaseTest.BaseTest;
+import com.OrangeHRMApplicationPages.Loginpage;
+
+public class LoginPageTest {
+
+	public class LogInPageTest extends BaseTest
+	{
+
+	@Test(priority=1,description=" Validating OrangeHRM Application LogIN Page Text")
+	public void orangeHRMApplicationLogInPage_logInPannelTextTest()
+	{
+
+		Loginpage logInPage = new Loginpage();
+	logInPage.OrangeHRM_logInPage_LogInPanelText();
+
+	}
+
+
+	@Test(priority=2,description=" Validating OrangeHRM Applicaiton LogIn Page Logo ")
+	public void orangeHRMApplicationLogInPage_LogoValidationTest()
+	{
+		Loginpage logInPage = new Loginpage();
+	logInPage.orangeHRMApplicationLogInPageLogoValidation();
+	}
+
+	@Test(priority=3,description=" Validating OrangeHRM Applicaiton LogIn Functionality ")
+	public void orangeHRMApplicationLogInPage_LogInTest() 
+	{
+		Loginpage logInPage = new Loginpage();
+	logInPage.orangeHRMApplicationLogInPage_logInValdiation("kejiyarani", "K@kejiya57");
+	}
+
+	}
+	
+	
+}

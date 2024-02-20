@@ -1,0 +1,7 @@
+<suite name="AddEmploy_UserdefinedMethod">
+<test name="loginpageText">
+<classes>
+<class name="com.excelOperations.loginpageText"/>
+</classes>
+</test>
+</suite>

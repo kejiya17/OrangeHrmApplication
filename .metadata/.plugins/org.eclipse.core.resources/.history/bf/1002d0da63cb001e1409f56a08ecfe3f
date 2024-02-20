@@ -1,0 +1,13 @@
+
+
+
+<suite name="OrangeHRMApplication "  >
+   
+    <test name="logInDetails">
+        <classes>
+           <class name="com.OHRM_EmployeeList.logInDetails"/>
+        </classes>
+   </test>
+      
+    </suite>
+   

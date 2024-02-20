@@ -1,0 +1,68 @@
+package com.RadioButonsTest;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
+import com.BaseTest.BaseTest;
+
+public class radioButtonsTest extends BaseTest
+{
+	
+	public void group1RadioButtons() 
+	{
+		/*
+		<input type="radio" name="group1" value="Milk">
+		<input type="radio" name="group1" value="Butter" checked="">
+		<input type="radio" name="group1" value="Cheese">
+
+		<input type="radio" name="group2" value="Water">
+		<input type="radio" name="group2" value="Beer">
+		<input type="radio" name="group2" value="Wine" checked="">
+		*/
+
+		By group1RadioButtonProperty=By.name("group1");
+		List<WebElement>group1RadioButtons=driver.findElements(group1RadioButtonProperty);
+		
+		int group1RadioButtons_Count=group1RadioButtons.size();
+		System.out.println(group1RadioButtons_Count);
+		
+		for(int index=0;index<=group1RadioButtons_Count;index++) 
+		{
+			String group1RadioButtonsNames=group1RadioButtons.get(index).getAttribute("value");
+			System.out.println(group1RadioButtonsNames);
+			group1RadioButtons.get(index).click();
+			
+			
+			
+			for(int radioButtonsStatus=0;radioButtonsStatus<group1RadioButtons_Count;radioButtonsStatus++ )
+			{
+				
+				
+				
+				
+				
+				
+				
+			System.out.println(group1RadioButtons.get(radioButtonsStatus).getAttribute("value")+" - "+ group1RadioButtons.get(radioButtonsStatus).getAttribute("checked"));
+			}
+			
+
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+	
+	
+	
+
+}

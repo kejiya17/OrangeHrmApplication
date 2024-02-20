@@ -1,0 +1,13 @@
+
+
+
+<suite name="OrangeHRMApplication "  >
+   
+    <test name="logInDetails">
+        <classes>
+           <class name="com.OHRM_EmployeeList.OHRM_EmployeeeListData_ExportExcelFile"/>
+        </classes>
+   </test>
+      
+    </suite>
+   

@@ -1,0 +1,13 @@
+
+
+
+<suite name="OrangeHRMApplication " parallel="tests" >
+   
+    <test name="applicationlaunch">
+        <classes>
+           <class name="com.excelOperations.AddEmploy_UserdefinedMethod"/>
+        </classes>
+   </test>
+      
+    </suite>
+   

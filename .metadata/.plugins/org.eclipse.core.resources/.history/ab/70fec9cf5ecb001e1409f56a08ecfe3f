@@ -1,0 +1,12 @@
+
+
+
+<suite name="OrangeHRMApplication" >
+   
+    <test name="MultipleTestData_Excel">
+        <classes>
+           <class name="com.excelOperations.MultipleTestData_Excel"/>
+        </classes>
+   </test>
+   </suite>
+   

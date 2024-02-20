@@ -1,0 +1,78 @@
+package com.excelOperations;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class AddEmploy_UserdefinedMethod {
+   
+	WebDriver driver;
+	String applicationUrlAddress="http://127.0.0.1/orangehrm-4.2.0.1/symfony/web/index.php/auth/login";
+	
+	/*FileInputStream loginTestDataFile=new FileInputStream("./src/com/OHRMTestDataExcelFiles/AddEmployeeTestSheet.xlsx");
+	XSSFWorkbook workbook=new XSSFWorkbook(loginTestDataFile); 
+	XSSFSheet loginTestDataSheet=workbook.getSheet("Shet1");
+	*/
+	
+	
+	public void applicationlaunch() 
+	{
+		System.setProperty("webdriver.chrome.driver", "./Browser driver files/chromedriver.exe");
+		driver=new ChromeDriver();
+		driver.get(applicationUrlAddress);
+	}	
+		
+	public void loginpageText() throws IOException 
+	{ 
+		FileInputStream loginTestDataFile=new FileInputStream("./src/com/OHRMTestDataExcelFiles/AddEmployeeTestSheet.xlsx");
+		
+		XSSFWorkbook workbook=new XSSFWorkbook(loginTestDataFile); 
+		XSSFSheet loginTestDataSheet=workbook.getSheet("Shet1");
+		Row loginpageTextRow=loginTestDataSheet.getRow(1);
+		Cell loginpageTextCell=loginpageTextRow.getCell(0);
+		String loginpageText=loginpageTextCell.getStringCellValue();
+        System.out.println(loginpageText);
+		String expected_loginpageText=loginpageText;
+		System.out.println("Expected Login Pgae Text is:-"+expected_loginpageText);
+		
+		
+		
+		
+		
+		
+	}
+		
+		
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		public static void main(String[]args) throws IOException
+		{
+			AddEmploy_UserdefinedMethod m1=new AddEmploy_UserdefinedMethod();
+			m1.applicationlaunch();
+			m1.loginpageText();
+			
+			
+			
+		}
+		
+		
+		
+		
+
+	}
+
+

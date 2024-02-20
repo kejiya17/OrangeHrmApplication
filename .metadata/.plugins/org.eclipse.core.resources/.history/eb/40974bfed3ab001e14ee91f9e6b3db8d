@@ -1,0 +1,21 @@
+package BrowserAutomation;
+
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class TestingBrowsers {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+     System.setProperty("webDriver.chrome.driver","/Testing/src/BrowserAutomation/TestingBrowsers.java");
+    		 
+     ChromeDriver srini = new ChromeDriver();
+		/*System.setProperty("webDriver.chrome.driver",
+				"C:\\Users\\srini\\Desktop\\Dec1030AMBatch\\Testing\\browserDriverFiles\\chromedriver.exe");
+
+				// Class     object
+				ChromeDriver srini = new ChromeDriver();*/
+
+     
+	}
+
+}

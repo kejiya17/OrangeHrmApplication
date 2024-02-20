@@ -1,0 +1,25 @@
+
+
+
+<suite name="OrangeHRMApplication " >
+   
+    <test name="applicationlaunch">
+        <classes>
+           <class name="com.excelOperations.AddEmploy_UserdefinedMethod"/>
+        </classes>
+   </test>
+      
+       <test name="LoginDetails">
+        <classes>
+           <class name="com.excelOperations.AddEmploy_UserdefinedMethod"/>
+        </classes>
+   </test>
+   
+    <test name="AddEmployee_PageText">
+        <classes>
+           <class name="com.excelOperations.AddEmploy_UserdefinedMethod"/>
+        </classes>
+   </test>
+   
+  </suite>
+   

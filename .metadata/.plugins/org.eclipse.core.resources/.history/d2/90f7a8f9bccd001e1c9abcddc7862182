@@ -1,0 +1,93 @@
+package com.OrangeHRMApplicationPages;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.testng.annotations.Test;
+
+import com.BaseTest.BaseTest;
+import com.utility.Log;
+
+public class Loginpage extends BaseTest{
+	
+	// 1.Identification Of WebElements
+	//<div id="logInPanelHeading">LOGIN Panel</div>
+
+	@FindBy(id="logInPanelHeading")
+	WebElement logInPanelText;
+	
+	//Performing Operation on the WebElement
+	
+	public void OrangeHRM_logInPage_LogInPanelText() 
+	{
+		String expected_OrangeHRMApplicationLogInPageLogInPannelText="LOGIN Panel";
+		Log.info("The Expected LogInPanel text is:-"+expected_OrangeHRMApplicationLogInPageLogInPannelText);
+		
+		String actual_OrangeHRMApplicationLogInPageLogInPannelText=logInPanelText.getText();
+		Log.info("The Actual LogInPanel text is:-"+actual_OrangeHRMApplicationLogInPageLogInPannelText);
+		
+		if(actual_OrangeHRMApplicationLogInPageLogInPannelText.equals(expected_OrangeHRMApplicationLogInPageLogInPannelText)) 
+		{
+			Log.info(" LogIn Pannel Text Validation Successful - PASS");
+		}
+		else 
+		{
+			Log.info(" LogIn Pannel Text Validation Not Successful - Fail");
+		}
+		
+	}
+	
+	
+	// OrangeHRM Application WebElement Property
+	// /html/body/div[1]/div/div[2]/div/img
+
+	@FindBy(xpath="/html/body/div[1]/div/div[2]/div/img")
+	WebElement orangeHRMApplicationLogInPageLogo;
+
+
+	public void orangeHRMApplicationLogInPageLogoValidation()
+	{
+
+	boolean flag=orangeHRMApplicationLogInPageLogo.isDisplayed();
+
+	if(flag)
+	{
+	
+	Log.info(" OrangeHRM Applicaiton LogIn page Logo found - PASS ");
+	}
+	else
+	{
+	Log.info(" OrangeHRM Applicaiton LogIn page Logo NOT found - FAIL ");
+	}
+
+	}
+
+
+	// id="txtUsername"
+
+	@FindBy(id="txtUsername")
+	WebElement userName;
+
+
+	// name="txtPassword"
+	@FindBy(name="txtPassword")
+	WebElement password;
+
+	// class="button"
+	@FindBy(className="button")
+	WebElement logInButton;
+
+
+	public void orangeHRMApplicationLogInPage_logInValdiation(String UserName,String Password)
+	{
+	userName.sendKeys(UserName);
+	password.sendKeys(Password);
+	logInButton.click();
+
+	// Log Message
+	}
+
+
+	
+	
+
+}

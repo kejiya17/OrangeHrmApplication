@@ -1,0 +1,12 @@
+
+
+
+<suite name="OHRM_EmployeeeListData_ExportExcelFile " >
+   
+    <test name="logInDetails">
+        <classes>
+           <class name="com.OHRM_EmployeeList.logInDetails"/>
+        </classes>
+   </test>
+   </suite>
+   

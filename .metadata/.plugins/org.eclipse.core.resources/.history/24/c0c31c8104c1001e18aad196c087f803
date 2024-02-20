@@ -1,0 +1,26 @@
+package com.DropDown;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Select_Dropdown {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		WebDriver driver;
+		String applicationurladdress="https://www.tsrtconline.in/oprs-web/";
+		System.setProperty("webdriver.chrome.driver","./Browser driver files/chromedriver.exe");
+		driver=new ChromeDriver();
+	    driver.get(applicationurladdress);
+		
+		
+		
+		
+		
+		
+		
+
+	}
+
+}
